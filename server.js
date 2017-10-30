@@ -8,8 +8,8 @@ app.use('/public', express.static(path.join(__dirname, 'public'), {
     fallthrough: false
 }));
 app.get('*', function (req, res) {
-    res.sendFile('sf.code/quick-node/public/index.html', {
-        root: path.join(__dirname, '../..')
+    res.sendFile('/public/index.html', {
+        root: path.join(__dirname, '')
     });
 })
 
