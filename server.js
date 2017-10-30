@@ -4,7 +4,7 @@ const app = express();
 
 //app.use(require('./app/config/static.files'))
 
-app.use('./public', express.static(path.join(__dirname, 'public'), {
+app.use('/public', express.static(path.join(__dirname, 'public'), {
     fallthrough: false
 }));
 app.get('*', function (req, res) {
